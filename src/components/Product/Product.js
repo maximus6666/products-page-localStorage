@@ -2,7 +2,7 @@ import React from "react"
 import { useDispatch,} from "react-redux";
 import { DELETE_PRODUCT } from "../../redux/actions";
 import './product.css';
-import { Link } from "react-router-dom";
+import { Link, useRouteMatch } from "react-router-dom";
 import { Box, Button, Image } from "grommet";
 
 const Product = (props) => {
@@ -15,6 +15,9 @@ const Product = (props) => {
       dispatch(DELETE_PRODUCT(id))
     }
   }
+
+  // let { path, url } = useRouteMatch()
+
      
   return (
     <Box 
@@ -43,7 +46,7 @@ const Product = (props) => {
         margin={{top: '10px'}}
 
       >
-        <Link to={`/${id}`}>
+        <Link to={`${id}`}>
           <Button 
             secondary
             label='Details'

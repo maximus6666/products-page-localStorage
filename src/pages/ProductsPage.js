@@ -10,6 +10,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  useRouteMatch,
+  HashRouter,
 } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
 
@@ -41,14 +43,16 @@ const ProductsPage = () => {
     setNewProductModalOpen(true);
   };
 
+  // let { path, url } = useRouteMatch()
+
   return (
-    <Router>
+    <HashRouter>
       <Switch>
-        <Route path='/:id'>
+        <Route path={`/:id`}>
           <ScrollToTop/>
           <ProductDetails />
         </Route>
-        <Route exact path='/products-page-localStorage/'>
+        <Route exact path='/'>
           <Grid 
             className='product-page'
             rows={['auto', 'flex']}
@@ -103,7 +107,7 @@ const ProductsPage = () => {
           </Grid>
         </Route>
      </Switch>
-    </Router>
+    </HashRouter>
   )
 }
 
