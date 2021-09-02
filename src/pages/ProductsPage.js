@@ -48,7 +48,7 @@ const ProductsPage = () => {
           <ScrollToTop/>
           <ProductDetails />
         </Route>
-        <Route exact path='/'>
+        <Route exact path='/products-page-localStorage/'>
           <Grid 
             className='product-page'
             rows={['auto', 'flex']}
