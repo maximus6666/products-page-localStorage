@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProductComment from "../ProductComment/ProductComment";
 import { Box, Button, Heading, Image, Text } from "grommet";
+import { Link } from 'react-router-dom';
 
 const ProductDetails = (props) => {
   const [editModalOpen, setEditModalOpen] = useState(false)
@@ -59,13 +60,23 @@ const ProductDetails = (props) => {
           <Text>Height: {height} cm</Text>
           <Text>Weight: {weight} g</Text>
         </Box>
-        <Button
-          onClick={handleOpen}
-          primary
-          label='Edit'
-          alignSelf='center'
-          margin='10px'
-        />
+        <Box direction='row' alignSelf='center'>
+          <Button
+            onClick={handleOpen}
+            primary
+            label='Edit'
+            alignSelf='center'
+            margin='10px'
+          />
+          <Link to='/'>
+            <Button
+              secondary
+              label='Back'
+              alignSelf='center'
+              margin='10px'
+            />
+          </Link>
+        </Box>
         <Modal 
           open={editModalOpen}
           productId={id}

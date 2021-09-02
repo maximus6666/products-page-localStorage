@@ -20,6 +20,16 @@ export default function SimpleModal(props) {
       props.onClose();
     } 
   };
+
+  const clearModalFields = () => {
+    setProductName('');
+    setProductImgUrl('');
+    setProductCount(1);
+    setProductWeight(1);
+    setProductWidth(1);
+    setProductHeight(1);
+  }
+
   const addProduct = () => {
     const validInputs = productName && productImgUrl.startsWith('http') 
     && productWeight && productWidth && productHeight;
@@ -39,6 +49,7 @@ export default function SimpleModal(props) {
       }
       dispatch( ADD_PRODUCT(productValues));
       handleClose();
+      clearModalFields();
     }else {
       alert('Please, fill the form. (Product Img Url must starts with "http")')
     }

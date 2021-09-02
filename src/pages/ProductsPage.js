@@ -7,10 +7,8 @@ import ProductDetails from '../components/ProductDetails/ProductDetails'
 import { Grid, Box, Button, Heading } from "grommet";
 
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
-  useRouteMatch,
   HashRouter,
 } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
@@ -42,8 +40,6 @@ const ProductsPage = () => {
   const handleOpen = () => {
     setNewProductModalOpen(true);
   };
-
-  // let { path, url } = useRouteMatch()
 
   return (
     <HashRouter>
