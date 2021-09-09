@@ -19,11 +19,12 @@ const Product = (props) => {
   return (
     <Box 
       pad='xsmall'
-      basis='1/3'
+      width='medium'
       direction='column'
       background='white'
       border='all'
       justify='between'
+      alignSelf='center'
     >
       <Box>
       <h2 className='product-title'>Name: {name}</h2>

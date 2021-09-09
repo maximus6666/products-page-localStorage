@@ -81,8 +81,8 @@ export default function SimpleModal(props) {
   }
 
   const saveButton = props.productName  
-    ? <Button margin='15px' size='large' primary label='Edit' color='neutral-1' onClick={editProduct}/>
-    : <Button margin='15px' size='large' primary label='Add' color='neutral-1' onClick={addProduct}/>;
+    ? <Button margin='15px' size='medium' primary label='Edit' color='neutral-1' onClick={editProduct}/>
+    : <Button margin='15px' size='medium' primary label='Add' color='neutral-1' onClick={addProduct}/>;
   
   return (
     props.open && <Layer onClickOutside={() => props.onClose()}>
@@ -113,7 +113,7 @@ export default function SimpleModal(props) {
             <Box 
               direction='row'
               pad='10px'
-              margin='20px'
+              margin='15px'
             >
               <Box
                 basis='1/2'
@@ -172,7 +172,7 @@ export default function SimpleModal(props) {
           >
             {saveButton}
             <Button 
-              size='large'
+              size='medium'
               margin='5px'
               primary
               label='Cancel'

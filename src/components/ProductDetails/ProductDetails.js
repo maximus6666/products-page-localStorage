@@ -29,7 +29,7 @@ const ProductDetails = (props) => {
 
   return (
       <Box
-        align='start'
+        align='center'
       >
         <Box
           alignSelf='center'
